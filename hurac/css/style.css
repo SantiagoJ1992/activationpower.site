@@ -10,7 +10,7 @@
 }
 
 .img-headline {
-    width: 55%;
+    width: 100%;
 }
 
 
@@ -57,7 +57,7 @@
     }
 
     .img-headline {
-        width: 95%;
+        /* width: 95%; */
     }
 
     .small-mobile {
