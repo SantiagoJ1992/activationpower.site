@@ -19,6 +19,7 @@ class KiwiVSLPlayer {
   
       this.instances.shift();
       this.instances.shift();
+      this.instances.shift();
       // console.log(instances);
   
   
