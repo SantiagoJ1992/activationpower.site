@@ -1,55 +1,34 @@
-/* Reseta os estilos padrões para evitar inconsistências entre navegadores */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos para garantir que a imagem do cabeçalho e das referências sejam responsivas */
-.headline img, .references img {
+img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Estilos para o container do VSL para garantir responsividade */
-#vid_6564a0b97ce41e0008841108 {
+.video-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* Aspect ratio de 16:9 */
+    /* Este padding-top vai criar um aspect ratio de 16:9 para o vídeo */
+    padding-top: 56.25%;
 }
 
-#thumb_6564a0b97ce41e0008841108 {
+.video-wrapper {
     position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
 
-#backdrop_6564a0b97ce41e0008841108 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
-}
-
-/* Media queries para ajustes específicos em diferentes larguras de tela */
-@media (max-width: 768px) {
-    /* Ajustes para tablets */
-    #vid_6564a0b97ce41e0008841108 {
-        padding-top: 75%; /* Aumentar o padding para manter o aspect ratio em telas mais estreitas */
+@media screen and (max-width: 600px) {
+    .video-container {
+        padding-top: 75%; /* Alterando o aspect ratio para dispositivos mais estreitos */
     }
 }
 
-@media (max-width: 480px) {
-    /* Ajustes para smartphones */
-    #vid_6564a0b97ce41e0008841108 {
-        padding-top: 100%; /* Aumentar ainda mais o padding para telas pequenas */
-    }
-}
-
-/* Adicionar mais media queries se necessário */
+/* Adicione mais media queries conforme necessário */
