@@ -1,18 +1,48 @@
-body, html {
+/* Reseta os estilos padrões para evitar inconsistências entre navegadores */
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    box-sizing: border-box;
 }
 
-.headline-image img, .references-image img {
-    width: 100%; /* This ensures the image stretches to the full container width */
-    height: auto; /* This keeps the image aspect ratio intact */
+/* Imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaços abaixo da imagem */
 }
 
-.video-sales-letter {
-    text-align: center; /* Center your VSL content */
-    padding: 20px; /* Add some padding around your VSL */
+/* Container da imagem do cabeçalho */
+.headline {
+    text-align: center; /* Centraliza a imagem do cabeçalho */
+    margin-bottom: 20px; /* Espaçamento entre a imagem do cabeçalho e o VSL */
 }
 
-/* Additional styling as necessary */
+/* Container do VSL */
+.video-container {
+    width: 100%; /* Usa a largura total disponível */
+    padding: 20px; /* Espaço interno para não tocar as bordas do navegador */
+}
+
+/* Container da imagem de referências */
+.references {
+    text-align: center; /* Centraliza a imagem das referências */
+    margin-top: 20px; /* Espaçamento entre o VSL e as referências */
+}
+
+/* Media queries para ajustes específicos em diferentes larguras de tela */
+@media (max-width: 768px) {
+    /* Ajustes para tablets */
+    .video-container {
+        padding: 15px; /* Menos espaço interno para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para smartphones */
+    .video-container {
+        padding: 10px; /* Ainda menos espaço interno para telas ainda menores */
+    }
+}
+
+/* Adicione mais media queries conforme necessário */
